@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>JQuery Functions</title>
+    <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+</head>
+<body>
+    <button class="click_button">Hide Paragraph</button>
+    <button class="unhide_button">Unhide Paragraph</button>
+    <button class="toggle_button">Toggle Paragraph</button>
+    <p class="p1">Click to hide this paragraph</p>
+    <img src="dog.png" alt="dog" class="dog" height="125" width="125">
+    <button class="hide_dog">Hide Dog Pic</button>
+    <button class="slide_down">Slide Dog Down</button>
+    <button class="slide_up">Slide Dog Up</button>
+    <button class="toggle_slide">Toggle Slide Dog</button>
+</body>
+<script>
+    $(document).ready(function(){
+        $('.click_button').click(function(){
+            $('.p1').hide();
+        })
+        $('.unhide_button').click(function(){
+            $('.p1').show();
+        })
+        $('.toggle_button').click(function(){
+            $('.p1').toggle();
+        })
+        $('.hide_dog').click(function(){
+            $('.dog').hide();
+        })
+        $('.slide_down').click(function(){
+            $('.dog').slideDown("slow");
+        })
+        $('.slide_up').click(function(){
+            $('.dog').slideUp("slow");
+        })
+        $('.toggle_slide').click(function(){
+            $('.dog').slideToggle("slow");
+        })
+    })
+</script>
+</html>
