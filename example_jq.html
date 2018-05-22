@@ -5,6 +5,11 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>JQuery Functions</title>
+    <style>
+        .red {
+            color:red;
+        }
+    </style>
     <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
 </head>
 <body>
@@ -17,6 +22,38 @@
     <button class="slide_down">Slide Dog Down</button>
     <button class="slide_up">Slide Dog Up</button>
     <button class="toggle_slide">Toggle Slide Dog</button>
+    <button class="toggle_fadeOut">Fade Out Dog</button>
+    <button class="toggle_fadeIn">Fade In Dog</button>
+    <p class="p2">Add A Class</p>
+    <button class="add_class">Add class</button>
+    <button class="add_before">Add before</button>
+    <p class="p3">is what I said</p>
+    <button class="add_after">Add after</button>
+    <p class="p4">My age is</p>
+    <button class="append">Append</button>
+    <p class="p5">My favorite color is </p>
+    <button class="attribute">GetAttribute</button>
+    <p class="p6">Get Attribute</p>
+
+    <button class="value">Get Value</button>
+    <p>Name: <input type="text" name="user"></p>
+
+    <button class="text">Text</button>
+    <p class="p7"></p>
+
+    <button class="store_data">Store Data</button>
+    <br>
+    <button class="display_data">Disply Data</button>
+    <p class="p8"></p>
+
+    <button class="html">Change HTML</button>
+    <p class="p9">HTML to be changed</p>
+
+
+
+
+
+
 </body>
 <script>
     $(document).ready(function(){
@@ -41,6 +78,58 @@
         $('.toggle_slide').click(function(){
             $('.dog').slideToggle("slow");
         })
+        $('.toggle_fadeOut').click(function(){
+            $('.dog').fadeOut("slow");
+        })
+        $('.toggle_fadeIn').click(function(){
+            $('.dog').fadeIn("slow");
+        })
+        $('.add_class').click(function(){
+            $('.p2').addClass("red");
+        })
+        $('.add_before').click(function(){
+            $('.p3').before("Hello");
+        })
+        $('.add_after').click(function(){
+            $('.p4').after("100");
+        })
+        $('.append').click(function(){
+            $('.p5').append("Blue");
+        })
+        $('.attribute').click(function(){            
+            var text = $('.p6').attr("class");
+            console.log(text);         
+        })
+        $('.value').click(function(){            
+            $('input:text').val("George Washington");
+        })
+        $('.text').click(function(){
+            $('.p7').text("Tulsa");
+        })
+        $('.store_data').click(function(){
+            $('.p8').data("x", "Tom");
+        })
+        // $('.display_data').click(function(){
+        //     alert($('.p8').data("x"));
+        // })
+        $('.display_data').click(function(){
+            var data = $('.p8').data("x");
+            console.log('x');
+            $('.p8').append(data);
+        })
+        $('.html').click(function(){
+            $('.p9').html("This has been changed");
+        })
+
+
+
+
+
+      
+
+
+
+
     })
 </script>
 </html>
